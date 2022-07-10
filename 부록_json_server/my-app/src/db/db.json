@@ -1,0 +1,33 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "date": "2022-06-20",
+      "email": "hojun1@gmail.com",
+      "phone": "01000000001"
+    },
+    {
+      "id": 2,
+      "date": "2022-06-21",
+      "email": "hojun2@gmail.com",
+      "phone": "01000000002"
+    },
+    {
+      "id": 3,
+      "date": "2022-06-22",
+      "email": "hojun3@gmail.com",
+      "phone": "01000000003"
+    },
+    {
+      "id": 4,
+      "date": "2022-07-30",
+      "email": "hojun4@gmail.com",
+      "phone": "01000000004"
+    },
+    {
+      "email": "hojun5@gmail.com",
+      "phone": "01000000005",
+      "id": 5
+    }
+  ]
+}
