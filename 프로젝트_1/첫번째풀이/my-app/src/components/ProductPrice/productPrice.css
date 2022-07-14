@@ -1,0 +1,14 @@
+/* 상품 가격 스타일 */
+/* medium 사이즈 */
+.m-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.m-price span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 2px;
+}

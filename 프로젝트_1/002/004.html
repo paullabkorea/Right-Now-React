@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<div id="root"></div>
+
+<body>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+        integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/babel">
+
+        function Header(menuOne, menuTwo) {
+            return (
+                <div>header
+                    <div>menu</div>
+                    <div>{menuOne}</div>
+                    <div>{menuTwo}</div>
+                </div>
+            )
+        }
+
+        // function Main(props) {
+        //     console.log(props)
+        //     return (
+        //         <div>main
+        //             <h1>hello {props.name}</h1>
+        //             <p>hello {props.age}</p>
+        //         </div>
+        //     )
+        // }
+
+        function Main({ name, age }) {
+            console.log(name, age)
+            return (
+                <div>main
+                    <h1>hello {name}</h1>
+                    <p>hello {age}</p>
+                </div>
+            )
+        }
+
+        function Product() {
+            return (
+                <div>product
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                    <div>best seller 옷</div>
+                </div>
+            )
+        }
+
+        function Footer() {
+            return <div>footer</div>
+        }
+
+        function f() {
+            return 100
+        }
+
+        function 로그아웃() {
+            return <button>로그아웃</button>
+        }
+
+        function 로그인() {
+            return (
+                <div>
+                    <input type="text" />
+                    <input type="password" />
+                    <button>로그인</button>
+                </div>
+            )
+        }
+
+        function Test(props) {
+            console.log(props)
+            return null
+        }
+
+        const login = false
+
+        const body = (
+            <div>
+                {/* 이렇게 값을 전달할 수 있습니다. */}
+                {Header('about', 'product')}
+                <Main name='hojun' age='10' />
+                {/* 이렇게 재사용할 수 있습니다. */}
+                {Product()}
+                {Product()}
+                {Footer()}
+                {console.log('hello')}
+                {1 + 1}
+                {'hello' + 'world'}
+                {'<br>'}
+                {f()}
+                {login ? 'one' : 'two'}
+                {/*
+                    {login ? 로그아웃() : 로그인()}
+                */}
+                {login ? <로그아웃 /> : <로그인 />}
+                <Test>
+                    hello world 1
+                    <h1>hello world 2</h1>
+                    <h2>hello world 3</h2>
+                    <Footer />
+                </Test>
+            </div>
+        )
+
+        const domContainer = document.querySelector('#root')
+        ReactDOM.render(body, domContainer);
+        console.dir(ReactDOM);
+
+    </script>
+</body>
+
+</html>
